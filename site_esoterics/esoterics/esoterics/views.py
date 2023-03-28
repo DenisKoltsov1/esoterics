@@ -8,13 +8,13 @@ from django.http import HttpResponse
 
 
 
-menu = [{'title': "Блог", 'url_name': 'blog'},
-        {'title': "Новости", 'url_name': 'news'},
-        {'title': "Цены", 'url_name': 'price'},
-        {'title': "Контакты", 'url_name': 'contacts'}]
+# menu = [{'title': "Блог", 'url_name': 'blog'},
+#         {'title': "Новости", 'url_name': 'news'},
+#         {'title': "Цены", 'url_name': 'price'},
+#         {'title': "Контакты", 'url_name': 'contacts'}]
 
 def index(request):
-    return render(request, 'esoterics/index.html', {'menu': menu})
+    return render(request, 'esoterics/index.html')
 
 def blog(request):
     return HttpResponse("Блог")
