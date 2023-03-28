@@ -6,5 +6,5 @@ from .views import *
 
 
 urlpatterns = [
-    path('', get_news, name='news'),
+    path('', get_news, name='get_news'),
 ]
