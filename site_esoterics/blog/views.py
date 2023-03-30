@@ -8,4 +8,4 @@ def get_blog(request):
     context = {
         'blog': blog
     }
-    return render(request, 'blog/get_blog.html', context)
+    return render(request, 'blog/get_blog.html', context=context)
