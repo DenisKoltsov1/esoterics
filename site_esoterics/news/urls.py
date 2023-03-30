@@ -7,4 +7,5 @@ from .views import *
 
 urlpatterns = [
     path('', get_news, name='get_news'),
+    path('post/<int:post_id>/', show_post, name='post'),
 ]
