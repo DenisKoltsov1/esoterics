@@ -15,5 +15,5 @@ def get_news(request):
         'posts': posts,
     }
 
-    return render(request, 'news/get_news.html', context=context)
+    return render(request, 'news/get_news_2.html', context=context)
 
