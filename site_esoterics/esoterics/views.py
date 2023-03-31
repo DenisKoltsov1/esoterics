@@ -16,9 +16,6 @@ from django.http import HttpResponse
 def index(request):
     return render(request, 'esoterics/index.html')
 
-def blog(request):
-    return HttpResponse("Блог")
-
 def price(request):
     return HttpResponse("Цены")
 
