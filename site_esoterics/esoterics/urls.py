@@ -19,6 +19,7 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from .views import *
+from userapp.views import RegisterView, LoginView, LogoutView
 
 
 urlpatterns = [
@@ -28,6 +29,9 @@ urlpatterns = [
     path('price/', price, name='price'),
     path('contacts/', contacts, name='contacts'),
     path('news/', include('news.urls')),
+    path('register/', RegisterView.as_view(), name='registration'),
+    path('login/', LoginView.as_view(), name='login'),
+    path('logout', LogoutView.as_view(), name='logout'),
 
 ]
 

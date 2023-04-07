@@ -37,10 +37,16 @@
                   <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
                 </div>
                 <small class="text-body-secondary">{{item.time_update|date:"d-m-Y H:i:s"}}</small>
+
+              {% if user.is_staff %}
+
               </div>
               <a style="margin-top:20px;" class="btn btn-secondary" href='news-update/{{item.id}}'>Изменить новость</a>
               <a style="margin-top:20px;" class="btn btn-danger" href='news-delete/{{item.id}}'>Удалить новость</a>
             </div>
+
+            {% endif %}
+
           </div>
         </div>
       </div>
