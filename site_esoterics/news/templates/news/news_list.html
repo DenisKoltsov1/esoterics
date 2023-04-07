@@ -53,7 +53,8 @@
     </div>
 {% endfor %}
 
+{% if user.is_staff %}
 <a style="margin-left:900px; margin-bottom:100px;" class="btn btn-primary" href='news-create/'>Добавить новость</a>
-
+{% endif %}
   
     {% endblock %}
