@@ -11,7 +11,7 @@ from .forms import NewsForm
 
 
 
-class NewsListView( ListView):
+class NewsListView(ListView):
     model = News
 
 
