@@ -1,12 +1,13 @@
 body {
-  background-color: #f7f7f7;
+  background-color: #4B0082;
   /*background-color: darkgray;*/
 }
 
+/*
 li::marker {
   content: '+';
 }
-
+*/
 
 a {
   color: darkblue;
@@ -42,6 +43,31 @@ h1.product, h2.product, h3.product {
   background-color: aquamarine;
 }
 
+.image-border {
+  border: 10px solid #56382d; /* Ширина,  стиль и цвет рамки */
+  margin-top: 50px;
+ 
+ /*
+  margin-left: 350px;
+  margin-right: 250px;
+  */
+  width: 527 px;
+  height: 527px;
+}
+
+.image-center
+{
+  text-align: center;
+}
+
+.text-orange {
+  color: 	#FF6600;
+  font-weight: 700;
+  font-size : 23px;
+  margin-top: 150px;
+  margin-left: 200px;
+  margin-right: 250px;
+}
 
 .push-button {
   /*display: inline-block;*/

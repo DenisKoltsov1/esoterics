@@ -20,13 +20,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 from .views import *
 from userapp.views import RegisterView, LoginView, LogoutView
-
+from price.views import PriceAPIView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='home'),
     path('blog/', include('blog.urls')),
-    path('price/', price, name='price'),
+    path('price/',include('price.urls')),
+    path('api/v1/price/', PriceAPIView.as_view()),
     path('contacts/', contacts, name='contacts'),
     path('news/', include('news.urls')),
     path('register/', RegisterView.as_view(), name='registration'),

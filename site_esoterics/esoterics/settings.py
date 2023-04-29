@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'blog',
     'esoterics',
     'userapp',
+    'price',
+    'contacts',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
