@@ -1,14 +1,21 @@
 from django.db import models
 
-
+from django.contrib.auth.models import User
 class Blog(models.Model):
     name = models.CharField(max_length=100, verbose_name='Имя')
-    mail = models.EmailField(verbose_name='Gmail')
-    photo = models.ImageField(upload_to='user_photo/')
-    created_at = models.DateTimeField(auto_now=True, verbose_name='Дата создания')
-    updated_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата изменения')
-    info = models.TextField(max_length=500, verbose_name='Краткая информация')
-
+    email = models.EmailField(max_length=100,verbose_name='Gmail')
+    specialization = models.CharField(max_length=100, verbose_name='Специализация')
+    mobile = models.CharField(max_length=100, verbose_name='Телефон')
+    address = models.CharField(max_length=100, verbose_name='Адрес')
+    photo = models.ImageField(max_length=100,upload_to='user_photo/')
+    created_at = models.DateTimeField(max_length=100,auto_now=True, verbose_name='Дата создания')
+    updated_at = models.DateTimeField(max_length=100,auto_now_add=True, verbose_name='Дата изменения')
+    
+    
     class Meta:
         verbose_name = 'Блог'
         verbose_name_plural = 'Пользователи'
+        
+        
+    def __str__(self):
+        return self.name

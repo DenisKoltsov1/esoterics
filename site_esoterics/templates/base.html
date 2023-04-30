@@ -10,7 +10,7 @@
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 	<link rel="icon" type="image/x-icon" href="{% static 'img/esoteric.ico' %}">
-	<link rel="stylesheet" href="{% static 'base.css' %}">
+	<link rel="stylesheet" href="{% static 'bases.css' %}">
 	
 
     {% block title %}
@@ -26,7 +26,7 @@
 				<a class="nav-item nav-link" aria-current="page" href="{% url 'home' %}">Домашняя страница</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-item nav-link" href="{% url 'get_blog' %}">Блог</a>
+				<a class="nav-item nav-link" href="{% url 'blog' %}">Блог</a>
 			  </li>
 			  <li class="nav-item">
 				<a class="nav-item nav-link" href="{% url 'news_view' %}">Новости</a>
@@ -69,14 +69,14 @@
 </head>
 
 	<body>
-		<div class="wrapper">
-
+		
+<div class="wrapper">
 			<div class="content">
 				{% block content %}
 				{% endblock %}
 			</div>
 		  
-			<div class="footer bg-light text-center text-white">
+			<div class=" footer bg-light text-center text-white">
 						<!-- Grid container -->
 		<div class="container p-4 pb-0">
 			<!-- Section: Social media -->
@@ -144,9 +144,9 @@
 			<a class="text-white" href="https://mdbootstrap.com/">Esoteric.com</a>
 		  </div>
 		  <!-- Copyright -->
-			</div>
-		  
+			
 		  </div>
+		 </div>
 
 
 
