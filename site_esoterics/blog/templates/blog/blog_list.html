@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
 {% for item in object_list %}
 <div class="container">
     <div class="main-body">
@@ -134,6 +135,12 @@
                         </div>
                     </div>
                 </div>
+
+              </div>
+              </div>  
                 {% endfor %}
+                {% if user.is_staff %}
+          <a style="margin-top:100px ;margin-left:700px; margin-bottom:100px;" class="btn btn-primary" href='blog-create/'>Добавить блог</a>
+          {% endif %}
              
 {% endblock %}

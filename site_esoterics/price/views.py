@@ -42,7 +42,7 @@ class PriceCreateView(UserPassesTestMixin, CreateView):
 class PriceUpdateView(UserPassesTestMixin, UpdateView):
     model = Price
     form_class = PriceForm
-    success_url = '/Price'
+    success_url = '/price'
 
     def test_func(self):
         return self.request.user.is_staff
@@ -50,7 +50,7 @@ class PriceUpdateView(UserPassesTestMixin, UpdateView):
 
 class PriceDeleteView(UserPassesTestMixin, DeleteView):
     model = Price
-    success_url = '/Price'
+    success_url = '/price'
 
     def test_func(self):
         return self.request.user.is_superuser    
