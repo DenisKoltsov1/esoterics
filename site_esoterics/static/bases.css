@@ -6,6 +6,8 @@
 html,
 body {
   height: 100%;
+  
+ 
 }
  
  .wrapper {
@@ -13,12 +15,16 @@ body {
   flex-direction: column;
   
   
+  
  }
 
- .content {
+ .wraper-contents {
+ 
   flex: 1 0 auto;
   height: 100%;
+  
 }
+
 .footer {
   flex: 0 0 auto;
 }

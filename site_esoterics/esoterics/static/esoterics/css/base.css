@@ -2,7 +2,10 @@ body {
   background-color: #4B0082;
   /*background-color: darkgray;*/
 }
-
+.footer
+{
+  background-color: #4B0082;
+}
 /*
 li::marker {
   content: '+';

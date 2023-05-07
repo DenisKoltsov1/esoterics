@@ -87,7 +87,23 @@ DATABASES = {
     }
 }
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'pivan4207@gmail.com'
+EMAIL_HOST_PASSWORD = '1234566qe'
+EMAIL_USE_TLS = True
 
+
+
+RECIPIENTS_EMAIL = ['127.0.0.1:8000']   # замените на свою почту
+DEFAULT_FROM_EMAIL = 'pivan4207@gmail.com'  # замените на свою почту
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey'
+
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 

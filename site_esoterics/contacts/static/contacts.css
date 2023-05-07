@@ -28,6 +28,7 @@ textarea {
   width: 100%;
   max-width: 1000px;
   padding: 0 20px;
+  margin-left: 70px;
 }
 
 /* Стили самой формы */
@@ -159,3 +160,7 @@ textarea {
 .button input[type="button"]:hover {
   background: rgb(0, 0, 207);
 }
+html, body {height:100%;}
+
+.message {height:100%;
+margin-top:1000 px;}

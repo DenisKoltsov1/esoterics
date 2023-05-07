@@ -15,11 +15,11 @@ class Blog(models.Model):
     
     class Meta:
         verbose_name = 'Блог'
-        verbose_name_plural = 'Пользователи'
+        #verbose_name_plural = 'Пользователи'
         
         
     def __str__(self):
-        return self.name,self.email ,self.specialization,self.mobile,self.address,self.photo
+        return '{} {} {} {} {} {}'.format(self.name,self.email ,self.specialization,self.mobile,self.address,self.photo)
 
 
     def get_absolute_url(self):

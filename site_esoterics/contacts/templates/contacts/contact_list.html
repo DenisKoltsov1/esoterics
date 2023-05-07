@@ -63,7 +63,7 @@
     
     
     <!-- Контейнер выравнивает по ширине и по центру -->
-    <div class="container">
+    <div class="containers">
 
         <!-- content содержит содержимое формы -->
         <div class="content">
@@ -83,13 +83,13 @@
             <div class="phone details">
               <i class="fas fa-phone-alt"></i>
               <div class="topic">Телефон</div>
-              <div class="text-one">8-800-000-00-00</div>
+              <div class="text-one">8-912-49-47-496</div>
               <div class="text-two">8-900-000-00-00</div>
             </div>
             <div class="email details">
               <i class="fas fa-envelope"></i>
               <div class="topic">Email</div>
-              <div class="text-one">support@site.com</div>
+              <div class="text-one">dublin87@mail.ru</div>
               <div class="text-two">admin@site.com</div>
             </div>
           </div>
@@ -107,23 +107,23 @@
             </p>
   
             <!-- Форма обратной связи -->
-            <form action="#">
-  
+            <form action="postuser/" method="post">
+            {% csrf_token %}
               <!-- Каждый input для выравнивания вкладываем в блок input-box -->
               <div class="input-box">
-                <input type="text" placeholder="Ваше имя" />
+                <input type="text" placeholder="Ваше имя"  name="name">
               </div>
               <div class="input-box">
-                <input type="text" placeholder="Введите email" />
+                <input type="text" placeholder="Введите email"  name="email">
               </div>
               <div class="input-box">
-                <input type="text" placeholder="Введите телефон" />
+                <input type="text" placeholder="Введите телефон"  name="phone"">
               </div>
               <div class="input-box message-box">
-                <textarea placeholder="Сообщение"></textarea>
+                <textarea placeholder="Сообщение"  name="message"></textarea>
               </div>
-              <div class="button">
-                <input type="button" value="Отправить" />
+              <div class="button" >
+                <input  class="button" type="submit"  />
               </div>
             </form>
           </div>

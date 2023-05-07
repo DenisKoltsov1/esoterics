@@ -3,14 +3,14 @@
 {% block content %}
 
 {% for item in object_list %}
-<div class="container">
-    <div class="main-body">
+<div   class="container">
+    <div style="margin-top: 50px;" class="main-body">
         <div class="row gutters-sm">
             <div class="col-md-4 mb-3">
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex flex-column align-items-center text-center">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin"
+                            <img src="{{item.photo.url}}" alt="Admin"
                                  class="rounded-circle" width="150">
 
                         </div>
@@ -134,10 +134,14 @@
 
                         </div>
                     </div>
-                </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                
 
-              </div>
-              </div>  
+              
+                
                 {% endfor %}
                 {% if user.is_staff %}
           <a style="margin-top:100px ;margin-left:700px; margin-bottom:100px;" class="btn btn-primary" href='blog-create/'>Добавить блог</a>

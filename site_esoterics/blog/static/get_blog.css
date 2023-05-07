@@ -51,3 +51,7 @@ body{
 .shadow-none {
     box-shadow: none!important;
 }
+.wrapper
+{
+    margin-top: 10px;
+}

@@ -26,9 +26,6 @@
 				<a class="nav-item nav-link" aria-current="page" href="{% url 'home' %}">Домашняя страница</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-item nav-link" href="{% url 'blog' %}">Блог</a>
-			  </li>
-			  <li class="nav-item">
 				<a class="nav-item nav-link" href="{% url 'news_view' %}">Новости</a>
 			  </li>
 			  <li class="nav-item">
@@ -36,6 +33,9 @@
 			  </li>
 			  <li class="nav-item">
 				<a class="nav-item nav-link" href="{% url 'contact_view' %}">Контакты</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-item nav-link" href="{% url 'blog' %}">Разработчики</a>
 			  </li>
 
 			{% if user.is_authenticated %}
@@ -48,7 +48,7 @@
 				<a class="nav-item nav-link" href="{% url 'registration' %}">Регистрация</a>
 				</li>
 				<li class="nav-item">
-				<a class="nav-item nav-link" href="{% url 'login' %}">Вход для зарегестрированных пользователей</a>
+				<a class="nav-item nav-link" href="{% url 'login' %}">Вход </a>
 				</li>
           {% endif %}
 			</ul>
@@ -71,71 +71,71 @@
 	<body>
 		
 <div class="wrapper">
-			<div class="content">
+			<div class="wraper-contents">
 				{% block content %}
 				{% endblock %}
+			
 			</div>
-		  
-			<div class=" footer bg-light text-center text-white">
-						<!-- Grid container -->
-		<div class="container p-4 pb-0">
-			<!-- Section: Social media -->
-			<section class="mb-4">
-			  <!-- Facebook -->
-			  <a
-				class="btn text-white btn-floating m-1"
-				style="background-color: #3b5998;"
-				href="#!"
-				role="button"
-				><i class="fab fa-facebook-f"></i
-			  ></a>
-		
-			  <!-- Twitter -->
-			  <a
-				class="btn text-white btn-floating m-1"
-				style="background-color: #55acee;"
-				href="#!"
-				role="button"
-				><i class="fab fa-twitter"></i
-			  ></a>
-		
-			  <!-- Google -->
-			  <a
-				class="btn text-white btn-floating m-1"
-				style="background-color: #dd4b39;"
-				href="#!"
-				role="button"
-				><i class="fab fa-google"></i
-			  ></a>
-		
-			  <!-- Instagram -->
-			  <a
-				class="btn text-white btn-floating m-1"
-				style="background-color: #ac2bac;"
-				href="#!"
-				role="button"
-				><i class="fab fa-instagram"></i
-			  ></a>
-		
-			  <!-- Linkedin -->
-			  <a
-				class="btn text-white btn-floating m-1"
-				style="background-color: #0082ca;"
-				href="#!"
-				role="button"
-				><i class="fab fa-linkedin-in"></i
-			  ></a>
-			  <!-- Github -->
-			  <a
-				class="btn text-white btn-floating m-1"
-				style="background-color: #333333;"
-				href="#!"
-				role="button"
-				><i class="fab fa-github"></i
-			  ></a>
-			</section>
-			<!-- Section: Social media -->
-		  </div>
+				<div class=" footer bg-light text-center text-white">
+							<!-- Grid container -->
+					<div class="container p-4 pb-0">
+					<!-- Section: Social media -->
+					<section class="mb-4">
+						<!-- Facebook -->
+						<a
+					class="btn text-white btn-floating m-1"
+					style="background-color: #3b5998;"
+					href="#!"
+					role="button"
+					><i class="fab fa-facebook-f"></i
+					></a>
+			
+					<!-- Twitter -->
+					<a
+					class="btn text-white btn-floating m-1"
+					style="background-color: #55acee;"
+					href="#!"
+					role="button"
+					><i class="fab fa-twitter"></i
+					></a>
+			
+					<!-- Google -->
+					<a
+					class="btn text-white btn-floating m-1"
+					style="background-color: #dd4b39;"
+					href="#!"
+					role="button"
+					><i class="fab fa-google"></i
+					></a>
+			
+					<!-- Instagram -->
+					<a
+					class="btn text-white btn-floating m-1"
+					style="background-color: #ac2bac;"
+					href="#!"
+					role="button"
+					><i class="fab fa-instagram"></i
+					></a>
+			
+					<!-- Linkedin -->
+					<a
+					class="btn text-white btn-floating m-1"
+					style="background-color: #0082ca;"
+					href="#!"
+					role="button"
+					><i class="fab fa-linkedin-in"></i
+					></a>
+					<!-- Github -->
+					<a
+					class="btn text-white btn-floating m-1"
+					style="background-color: #333333;"
+					href="#!"
+					role="button"
+					><i class="fab fa-github"></i
+					></a>
+				</section>
+				<!-- Section: Social media -->
+					</div>
 		  <!-- Grid container -->
 		
 		  <!-- Copyright -->
@@ -144,11 +144,8 @@
 			<a class="text-white" href="https://mdbootstrap.com/">Esoteric.com</a>
 		  </div>
 		  <!-- Copyright -->
-			
+					</div>
 		  </div>
-		 </div>
-
-
 
 	</body>
 

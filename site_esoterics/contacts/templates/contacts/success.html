@@ -69,20 +69,16 @@
   </nav>
 </head>
 <body>
-    <div class="wrapper">
+    <div style="margin-top: 30px;" class="wrapper">
         <div class="wraper-contents">
     
-    <form method="POST">
-        {% csrf_token %}
-        {{form.as_p}}
-        <button class="btn btn-primary">Зарегестрировать</button>
-        </form>  
-        
-    </div>   
+            <div  class="meesage"style="height: 100%;">
+                <h1>Сообщение успешно отправленно </h1> 
+             </div>
     
 
 
-<div class=" footer  text-center text-white">
+<div style="margin-top: 65vh;" class=" footer  text-center text-white">
     <!-- Grid container -->
   <div class="container p-4 pb-0">
   <!-- Section: Social media -->
@@ -158,6 +154,15 @@
   </body>
   </html> 
   {% endblock %}
+
+
+
+
+
+
+
+
+
 
 
 
