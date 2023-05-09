@@ -5,5 +5,6 @@ urlpatterns = [
      path('', ContactListView.as_view(), name='contact_view'),
      #path('', contact),
      path("postuser/", views.postuser),
+     path("viewContact/", views.view),
 ]
     

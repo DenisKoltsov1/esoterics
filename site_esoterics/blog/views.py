@@ -4,11 +4,24 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from blog.forms import BlogForm
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin, PermissionRequiredMixin
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin, PermissionRequiredMixin
+from django.http import HttpResponse
+    
+import requests
 
 class Blog(ListView):
     models = Blog
     queryset  = Blog.objects.all()
 
+class BlogCreate(UserPassesTestMixin,CreateView):
+    models = Blog
+    form_class = BlogForm
+    success_url = '/blog'
+    template_name = 'blog/blog_form.html'
+    
+    def test_func(self):
+        return self.request.user.is_staff
+
+'''
 
 class BlogCreate(UserPassesTestMixin,CreateView):
     models = Blog
@@ -17,17 +30,15 @@ class BlogCreate(UserPassesTestMixin,CreateView):
     #template_name = 'path/to/file.html'
     def test_func(self):
         return self.request.user.is_staff
-    
+ 
+   
+def CreateBlog(requests):
+   
+    form = BlogForm(initial=dict(name=requests.name,email=requests.email,specialization=requests.specialization,mobile=requests.mobile,address=requests.adress,photo=requests.photo))
+    context = dict(form=form)
+    return render(requests, 'blog_form.html',form)
+    '''
 
-'''
-    class PriceUpdateView(UserPassesTestMixin, UpdateView):
-    model = Blog
-    form_class = BlogForm
-    success_url = '/Price'
-
-    def test_func(self):
-        return self.request.user.is_staff
-'''
 
 class BlogDeleteView(UserPassesTestMixin, DeleteView):
     model = Blog

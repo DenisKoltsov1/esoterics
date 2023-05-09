@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'price',
     'contacts',
     'rest_framework',
+    
 ]
 
 MIDDLEWARE = [

@@ -63,7 +63,7 @@
     
     
     <!-- Контейнер выравнивает по ширине и по центру -->
-    <div class="containers">
+    <div style="margin-top: 40px;" class="containers">
 
         <!-- content содержит содержимое формы -->
         <div class="content">
@@ -129,7 +129,9 @@
           </div>
         </div>
       </div>
-  
+      {% if user.is_staff %}
+      <a style="margin: 0 auto; display: block ;width: 150px; white-space:nowrap ;margin-top: 40px ;margin-bottom: 50px;" class="btn btn-primary" href="viewContact/"">Посмотреть  контакты</a>
+      {% endif %}
       <!-- Подключение шрифтовых иконок, можно получить на fontawesome.com -->
       <script
         src="https://kit.fontawesome.com/fce9a50d02.js"

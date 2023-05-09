@@ -9,8 +9,7 @@ class Blog(models.Model):
     mobile = models.CharField(max_length=100, verbose_name='Телефон')
     address = models.CharField(max_length=100, verbose_name='Адрес')
     photo = models.ImageField(max_length=100,upload_to='user_photo/')
-    #created_at = models.DateTimeField(max_length=100,auto_now=True, verbose_name='Дата создания')
-    #updated_at = models.DateTimeField(max_length=100,auto_now_add=True, verbose_name='Дата изменения')
+    
     
     
     class Meta:
